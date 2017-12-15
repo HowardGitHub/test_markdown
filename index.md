@@ -17,7 +17,7 @@ Contents:
    question.md
    answer_beni.md
    testdir/index.md
-
+   googlenet.md
 Indices and tables
 ==================
 
