@@ -17,8 +17,6 @@ Contents:
    question.md
    answer_beni.md
    testdir/index.md
-```
-
 
 Indices and tables
 ==================
@@ -27,3 +25,4 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
+``` 
