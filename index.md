@@ -3,8 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Sphinx with Markdown's documentation!
-================================================
+# Welcome to Sphinx with Markdown's documentation!
 
 This is a Sphinx documentation project that shows how you could use Markdown in Sphinx.
 

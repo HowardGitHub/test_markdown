@@ -13,7 +13,7 @@ You can use Markdown and reStructuredText in the same Sphinx project. How to do 
     
     source_suffix = ['.rst', '.md']
 
-
+# add i中文z 
 
  [Read The Docs]: http://docs.readthedocs.org/en/latest/getting_started.html#in-markdown
  [beni]: http://stackoverflow.com/a/2487862/322283
