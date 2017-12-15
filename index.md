@@ -16,7 +16,7 @@ Contents:
    answer.md
    question.md
    answer_beni.md
-
+   testdir/index.md
 ```
 
 
