@@ -16,8 +16,8 @@ Contents:
    answer.md
    question.md
    answer_beni.md
-   testdir/index.md
-   googlenet.md
+   hist_ipynb.ipynb
+
 Indices and tables
 ==================
 
