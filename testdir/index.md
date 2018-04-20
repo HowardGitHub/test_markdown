@@ -5,5 +5,5 @@
    :maxdepth: 2
 
    test.md
-
+   dir1_test.md
 ```
