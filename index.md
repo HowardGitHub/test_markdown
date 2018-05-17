@@ -16,7 +16,7 @@ Contents:
    answer.md
    question.md
    answer_beni.md
-   hist_ipynb
+   hist_ipynb.html
 
 Indices and tables
 ==================
