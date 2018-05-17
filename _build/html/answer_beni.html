@@ -1,0 +1,296 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Beni&#39;s very comprehensive answer &mdash; Sphinx with Markdown 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Sphinx with Markdown 0.1.0 documentation" href="index.html"/>
+        <link rel="next" title="this is a title in ipynb" href="hist_ipynb.html"/>
+        <link rel="prev" title="Question: Using sphinx with Markdown instead of RST" href="question.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Sphinx with Markdown
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="answer.html">Marijn's Answer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="question.html">Question: Using sphinx with Markdown instead of RST</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Beni's very comprehensive answer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hist_ipynb.html">this is a title in ipynb</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Sphinx with Markdown</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Beni's very comprehensive answer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/answer_beni.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+/* nice headers on first paragraph of info/warning boxes */
+.admonition .first {
+    margin: -12px;
+    padding: 6px 12px;
+    margin-bottom: 12px;
+    color: #fff;
+    line-height: 1;
+    display: block;
+}
+.admonition.warning .first {
+    background: #f0b37e;
+}
+.admonition.note .first {
+    background: #6ab0de;
+}
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+</style>
+<div class="section" id="beni-s-very-comprehensive-answer">
+<span id="beni-s-very-comprehensive-answer"></span><h1>Beni's very comprehensive answer<a class="headerlink" href="#beni-s-very-comprehensive-answer" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>This is Beni's answer, taken from <a class="reference external" href="http://stackoverflow.com/a/2487862/322283">StackOverflow</a></div></blockquote>
+<p>The &quot;proper&quot; way to do that would be to write a <a class="reference external" href="http://docutils.sourceforge.net/docs/dev/hacking.html#parsing-the-document">docutils parser</a> for markdown.  (Plus a Sphinx option to choose the parser.)  The beauty of this would be instant support for all docutils output formats (but you might not care about that, as similar markdown tools already exist for most).  Ways to approach that without developing a parser from scratch:</p>
+<ul class="simple">
+<li>You could cheat and write a &quot;parser&quot; that uses <a class="reference external" href="http://johnmacfarlane.net/pandoc/">Pandoc</a> to convert markdown to RST and pass that to the RST parser :-).</li>
+<li>You can use an existing markdown-&gt;XML parser and transform the result (using XSLT?) to the docutils schema.</li>
+<li>You could take some <a class="reference external" href="http://lepture.com/en/2014/markdown-parsers-in-python">existing python markdown parser</a> that lets you define a custom renderer and make it build docutils node tree.</li>
+<li>You could fork the existing RST reader, ripping out everything irrelevant to markdown and changing the different syntaxes (<a class="reference external" href="https://gist.github.com/dupuy/1855764">this comparison</a> might help)...EDIT: I don't recommend this route unless you're prepared to heavily test it.  Markdown already has too many subtly different dialects and this will likely result in yet-another-one...</li>
+</ul>
+<p><strong>UPDATE:</strong> https://github.com/sgenoud/remarkdown is a markdown reader for docutils.  It didn't take any of the above shortcuts but uses a <a class="reference external" href="https://pypi.python.org/pypi/Parsley">Parsley</a> PEG grammar inspired by <a class="reference external" href="https://github.com/jgm/peg-markdown">peg-markdown</a>. <a class="reference external" href="https://github.com/sgenoud/remarkdown/issues/2">Doesn't yet</a> support directives.</p>
+<p><strong>UPDATE: https://github.com/rtfd/recommonmark and is another docutils reader, natively supported on ReadTheDocs.</strong>  Derived from remarkdown but uses the <a class="reference external" href="https://github.com/rolandshoemaker/">CommonMark-py</a> parser.  Doesn't support directives, but <a class="reference external" href="https://recommonmark.readthedocs.org/en/latest/auto_structify.html">can convert</a> more or less natural Markdown syntaxes to appropriate structures e.g. list of links to a toctree.  For other needs, an <a class="reference external" href="https://recommonmark.readthedocs.org/en/latest/auto_structify.html#embed-restructuredtext"><code class="docutils literal"><span class="pre">```eval_rst</span></code> fenced block</a> lets you embed any rST directive.</p>
+<hr class="docutils" />
+<p>In <strong>all</strong> cases, you'll need to invent extensions of Markdown to represent <a class="reference external" href="http://sphinx-doc.org/markup/index.html">Sphinx directives and roles</a>.  While you may not need all of them, some like <code class="docutils literal"><span class="pre">..</span> <span class="pre">toctree::</span></code> are essential.This I think is the hardest part.  reStructuredText before the Sphinx extensions was already richer than markdown.  Even heavily extended markdown, such as <a class="reference external" href="http://johnmacfarlane.net/pandoc/README.html#pandocs-markdown">pandoc's</a>, is mostly a subset of rST feature set.  That's a lot of ground to cover!</p>
+<p>Implementation-wise, the easiest thing is adding a generic construct to express any docutils role/directive.  The obvious candidates for syntax inspiration are:</p>
+<ul class="simple">
+<li>Attribute syntax, which pandoc and some other implementations already allow on many inline and block constructs.  For example <code class="docutils literal"><span class="pre">`foo`{.method}</span></code> -&gt; <code class="docutils literal"><span class="pre">`foo`:method:</span></code>.</li>
+<li>HTML/XML.  From <code class="docutils literal"><span class="pre">&lt;span</span> <span class="pre">class=&quot;method&quot;&gt;foo&lt;/span&gt;</span></code> to the kludgiest approach of just inserting docutils internal XML!</li>
+<li>Some kind of YAML for directives?</li>
+</ul>
+<p>But such a generic mapping will not be the most markdown-ish solution...
+Currently most active places to discuss markdown extensions are https://groups.google.com/forum/#!topic/pandoc-discuss, https://github.com/scholmd/scholmd/</p>
+<p>This also means you can't just reuse a markdown parser without extending it somehow.  Pandoc again lives up to its reputation as the swiss army knife of document conversion by supporting <a class="reference external" href="http://johnmacfarlane.net/pandoc/scripting.html">custom filtes</a>.  (In fact, if I were to approach this I'd try to build a generic bridge between docutils readers/transformers/writers and pandoc readers/filters/writers.  It's more than you need but the payoff would be much wider than just sphinx/markdown.)</p>
+<hr class="docutils" />
+<p>Alternative crazy idea: instead of extending markdown to handle Sphinx, extend reStructuredText to support (mostly) a superset of markdown!  The beauty is you'll be able to use any Sphinx features as-is, yet be able to write most content in markdown.</p>
+<p>There is already <a class="reference external" href="https://gist.github.com/dupuy/1855764">considerable syntax overlap</a>; most notably link syntax is incompatible.  I think if you add support to RST for markdown links, and <code class="docutils literal"><span class="pre">###</span></code>-style headers, and change default <code class="docutils literal"><span class="pre">`backticks`</span></code> role to literal, and maybe change indented blocks to mean literal (RST supports <code class="docutils literal"><span class="pre">&gt;</span> <span class="pre">...</span></code> for quotations nowdays), you'll get something usable that supports most markdown.</p>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="hist_ipynb.html" class="btn btn-neutral float-right" title="this is a title in ipynb" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="question.html" class="btn btn-neutral" title="Question: Using sphinx with Markdown instead of RST" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Marijn van der Zee.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

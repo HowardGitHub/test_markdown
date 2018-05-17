@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 import recommonmark
 from recommonmark.transform import AutoStructify
+from recommonmark.parser import CommonMarkParser
+
+source_parsers = {
+    '.md': CommonMarkParser,
+} 
 
 # At the bottom of conf.py
 def setup(app):
@@ -40,6 +45,7 @@ def setup(app):
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'nbsphinx',
     'sphinx.ext.githubpages',
 ]
 # Add any paths that contain templates here, relative to this directory.
@@ -349,10 +355,3 @@ texinfo_documents = [
 #
 # texinfo_no_detailmenu = False
 
-from recommonmark.parser import CommonMarkParser
-
-source_parsers = {
-    '.md': CommonMarkParser,
-}
-
-source_suffix = ['.rst', '.md']
