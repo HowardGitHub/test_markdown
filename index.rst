@@ -13,6 +13,7 @@ Welcome to test's documentation!
 
    answer.md
    question.md
+   hist_ipynb.ipynb
 
 Indices and tables
 ==================
