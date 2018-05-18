@@ -14,7 +14,6 @@ Welcome to test's documentation!
    answer.md
    question.md
    hist_ipynb.ipynb
-   hist_md.md
 
 Indices and tables
 ==================
