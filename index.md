@@ -15,7 +15,6 @@ Contents:
 
    answer.md
    question.md
-   answer_beni.md
 
 Indices and tables
 ==================
