@@ -5,7 +5,7 @@ from recommonmark.parser import CommonMarkParser
 
 source_parsers = {
     '.md': CommonMarkParser,
-} 
+}
 
 # At the bottom of conf.py
 def setup(app):
